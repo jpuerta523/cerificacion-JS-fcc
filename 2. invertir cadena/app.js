@@ -22,6 +22,8 @@ return reversedStr
 
 /* boton imprime cadena invertida en panatalla  */
 btn.addEventListener("click",()=>{
+ 
+        resultado.classList.remove("d-none")
         let str = texto.value
         resultado.textContent = `${reverseString(str)}`       
 })
