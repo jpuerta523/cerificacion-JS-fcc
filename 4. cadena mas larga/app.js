@@ -14,6 +14,7 @@ function strMaxLeng(str){
 
 /* boton Calcular  */
 btn.addEventListener("click",()=>{
+    resultado.classList.remove("d-none")
     let ans = input.value
     resultado.textContent = `La palabra más larga de la oración: "${ans}" tiene ${strMaxLeng(ans)} caracteres.`       
 })
