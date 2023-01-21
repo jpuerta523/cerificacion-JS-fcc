@@ -31,10 +31,10 @@ btn.addEventListener("click",()=>{
     /* maneja los resultados para true y false */
     if (ans===true){
         resultado.classList.remove("d-none")
-        resultado.textContent = `la palabra ${str} efectivamente finaliza con ${strEnd}`
+        resultado.textContent = `la palabra "${str}" efectivamente finaliza con "${strEnd}".`
     }else{
         resultadoFalso.classList.remove("d-none")
-        resultadoFalso.textContent = `la palabra ${str} no finaliza con ${strEnd}`
+        resultadoFalso.textContent = `la palabra "${str}" no finaliza con "${strEnd}".`
     }
     
     /* resultado.textContent = ` ${confirmEnding(str, strEnd)}`  */      
