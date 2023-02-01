@@ -9,35 +9,31 @@ const btn = document.getElementById("calculate")
 const resultado = document.querySelector(".alert-success")
 
 /* logica monitos trocitos divide el arreglo por tamaño indicado por num y luego lo agrega al resultado*/
- //let arr = ["a", "b", 2, 3, 4, "c", 7, 8, 9]
- //console.log(arr)
+let arr = [0, 1, 2, 3, 4, 5, 7, 8, 9]
 let num = 2
 
 function chunkArrayInGroups(arr, num) {
-    
-    let ans = ""
+    let ans = [] 
     for(let i=0; i<arr.length; i=i+num){
         let arrSlice = arr.slice(i, i+num) 
-        //ans.push(arrSlice)
-        ans = `${ans} [${arrSlice}]`
-        //console.log(ans)
+    /* let arrSlice = arr.slice(i, i+num) 
+        let arrSlice = arr.slice(i, i+num)  */
+    ans.push(arrSlice)
+    //console.log(ans)
         }
         return ans
 }
 
-//console.log(chunkArrayInGroups(arr, num))
+console.log(chunkArrayInGroups(arr, num))
 
 /* boton calcular */
 
-btn.addEventListener("click",()=>{
+/* btn.addEventListener("click",()=>{
     resultado.classList.remove("d-none")
-    let str = `[${input1.value}]`;
-    let num1 = parseInt(input2.value); 
-    let arr1 = JSON.parse(str)
+    let arr = (input1.value).trim().split(' ');
+    let num = (input2.value);
     
-/*     console.log(arr1)
-    console.log(num1) */
-    //console.log(chunkArrayInGroups(arr1, num1))
-    resultado.textContent = `[${chunkArrayInGroups(arr1, num1)}]` 
-}) 
+    console.log(chunkArrayInGroups(arr, num))
+    resultado.textContent = `${chunkArrayInGroups(arr, num)}` 
+})*/
 
